@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Simple Blog Application
 
-## Getting Started
+- Create a blog post
+- View a blog post
+- Edit a blog post
+- Delete a blog post
+- List all blog posts
 
-First, run the development server:
+## Models
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Blog Post
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ID
+- Title
+- Content
+- Author
+- Date Created
+- Cover Image
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## User
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- ID
+- Name
+- Email
+- Password
+- Date Created
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Created next app with npx create-next-app app-name
+2. Created a database into planetscale
+3. Installed prisma (an ORM)
+   prisma basically helps us not to write SELECT \* FROM Blog kind of SQL commands
+4. Created datamodels
+5. Created API route for fetching list of blog posts
+6. Installed tailwind (css library)
+7. Searched for online templates
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- BlogCard
+- Header
