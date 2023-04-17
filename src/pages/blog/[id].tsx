@@ -7,6 +7,7 @@ const BlogDetailPage = () => {
   const router = useRouter()
   const { id } = router.query
 
+  // Client side fetching...
   useEffect(() => {
     fetch(`/api/blog/${id}`)
       .then((res) => res.json())

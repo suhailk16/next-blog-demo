@@ -1,6 +1,9 @@
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+  const auth = useSelector((state) => state.auth)
+
   return (
     <header aria-label="Page Header" className="bg-gray-50">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
@@ -78,7 +81,7 @@ const Header = () => {
             <span className="sr-only">Profile</span>
             <img
               alt="Man"
-              src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+              src={auth.imageUrl}
               className="h-10 w-10 rounded-full object-cover"
             />
           </a>
@@ -87,7 +90,7 @@ const Header = () => {
         <div>
           <Link href="/">
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl underline">
-              Welcome Back, Barry!
+              Welcome Back, {auth.name}!
             </h1>
           </Link>
         </div>

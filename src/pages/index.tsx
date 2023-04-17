@@ -5,6 +5,7 @@ import Header from '../components/Header'
 export default function Home() {
   const [posts, setPosts] = useState([])
 
+  // Client side data fetching...
   useEffect(() => {
     fetch('/api/blog')
       .then((res) => res.json())
