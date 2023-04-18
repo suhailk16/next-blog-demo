@@ -191,3 +191,13 @@ function LoginPage() {
 }
 
 export default LoginPage
+
+/*
+
+  upload from the front-end
+    grab at the back-end
+    upload to cloud storage service s3
+    grab the upload url (imageUrl)
+    store the imageUrl to the database
+
+*/
