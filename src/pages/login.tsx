@@ -56,6 +56,8 @@ function LoginPage() {
               imageUrl: res.imageUrl,
             }),
           )
+          localStorage.setItem('loggedIn', 'YES')
+          localStorage.setItem('userId', res.id)
           router.push('/')
         }
       } catch (error) {
