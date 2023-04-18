@@ -6,6 +6,7 @@ import { logout } from '../store/store'
 const Header = () => {
   const router = useRouter()
   const dispatch = useDispatch()
+  // @ts-ignore
   const auth = useSelector((state) => state.auth)
 
   const handleLogout = () => {

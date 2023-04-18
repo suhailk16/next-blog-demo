@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const dispatch = useDispatch()
   const [isAppReady, setIsAppReady] = useState(false)
+  // @ts-ignore
   const auth = useSelector((state) => state.auth)
 
   const fetchProfile = async () => {
